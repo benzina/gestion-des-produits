@@ -18,8 +18,12 @@ public class GestionDesProduitsApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        produitRepository.save(new Produit(null,"PC Toshiba",3887,2));
-        produitRepository.save(new Produit(null,"PC dell",6887,12));
+        produitRepository.save(new Produit(null,"PC accer",3887,2));
+        produitRepository.save(new Produit(null,"PC samsung",6887,12));
+
+        produitRepository.findAll().forEach(p->{
+            System.out.println(p.toString());
+        });
 
 
     }
